@@ -1,8 +1,12 @@
-.con
+.container {
+    position: grid;
+}
 
 .item{
     position: flex;
     text-align: center;
     justify-content: center;
+    margin: 1px;
+    padding: 5px;
     border: 1px solid black;
 }

@@ -4,55 +4,56 @@
 * {
     font-family: 'Pretendard';
     margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    background-image: url('background.jpg');
+    background-size : cover;
+    background-repeat: repeat-x;
+    animation: move-bg 25s linear infinite;
 }
 
 .container {
     display: flex;
-    height: 100vh;
-    /* border: 2px solid black; */
+    height: 100%;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .center {
+    backdrop-filter: blur(10px);
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     height: 100vh;
     font-size: 30px;
+    text-shadow: 1px 1px 2px rgb(34, 34, 34);
     /* border: 2px solid black; */
+    color: rgb(255, 252, 242);
 }
 
 .welcome-text{
     position: absolute;
-    z-index: 1;
     animation: fadeInOut 3s ease-in forwards;
-    /* animation: fadeIn 3s ease-in forwards; */
+
 }
 
 .intro{
     opacity: 0;
     position: absolute;
-    z-index: 1;
     animation: fadeIn 4s ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 3s;
 }
 
-@keyframes fadeInOut {
-    0% { opacity: 0; }
-    50% { opacity: 1; }
-    100% { opacity: 0; }
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 .enter-button {
     position: relative;
     top: 20%;
-    
+    box-shadow: 1px 2px 1px  lightblue;
     width: 100px;
     height: 40px;
     border-radius: 20px;
@@ -66,6 +67,23 @@
     /* animation: fadeIn 1s ease-in forwards; */
 }
 
+.enter-button :hover {
+    transform: scale(1.25);
+    cursor: pointer;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -76,29 +94,21 @@
     }
 }
 
-
-/* PC , 테블릿 가로 (해상도 768px ~ 1023px)*/ 
-@media (min-width:768px) and (max-width:1023px) { 
-    .enter-button{
-        background-color: rgba(37, 173, 173, 0.625);
+@keyframes move-bg {
+    to {
+        background-position-x: calc(100vh * (-7000 / 2627));
     }
-    
-} 
+}
 
-@media all and (min-width:350px) and (max-width:767px) {    
-    .center{
-        height: auto;
-        width: 100%;
-    }
 
+@media (max-width: 800px) {
     .welcome-text {
         font-size: 2em;
         /* border: 1px solid black; */
         /* padding-bottom: env(safe-area-inset-bottom); */
-    }
+}
     
     .intro {
-        text-shadow: 1px 1px 1px gray;
         margin-left : 13vw;
         margin-right : 13vw;
         /* border: 1px solid black; */
@@ -109,18 +119,4 @@
         background-color: rgba(37, 173, 173, 0.625);
     }
     
-}
-
-/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
-@media all and (max-width:349px) {
-
-    .intro .welcome-text{
-        font-size: 0.3em;
-        margin: 30px;
-        border: 1px solid black  ;
-    }
-
-    .enter-button{
-        background-color: lawngreen;
-    }
 }

@@ -29,10 +29,15 @@ li {
     list-style : none;
 }
 
+.navbar-menu li :hover {
+    background-color: blanchedalmond;
+    border-radius: 4px;
+}
+
 .navbar-logo {
-    font-size: 20px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    margin: 8px;
 }
 
 .navbar-logo img{
@@ -47,6 +52,10 @@ li {
 
 .navbar-logo h1{
     color: azure;
+}
+
+.navbar-btn { 
+    display: none;
 }
 
 article {
@@ -106,8 +115,6 @@ article {
     text-align: center;
     height: 90%;
     max-width: 100%;
-    margin: 5%
-    animation
 }
 
 @media (min-width:768px) and (max-width:1023px) { 
@@ -117,7 +124,16 @@ article {
 @media (min-width:350px) and (max-width:767px) {    
 
     .navbar-logo{
-        font-size: 1.2em;
+        display: flex;
+        position: sticky;
+        justify-content: center;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin: 0px;
+    }
+
+    .navbar-logo img{
+        margin: 0;
     }
     
     .navbar{
@@ -129,13 +145,24 @@ article {
     }
 
     .navbar-menu{
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
     }
-/* 
-    .intro{
-    } */
+
+    .navbar-menu.active{
+        display: block;
+    }
+
+
+    .navbar-btn {
+        display: block;
+        position: absolute;
+        color: aliceblue;
+        
+        height: 100%;
+        right: 20px;
+    }
 
     .title h1{
         border: 1px solid rgb(51, 42, 94);

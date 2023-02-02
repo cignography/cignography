@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(67, 79, 133);
+    background-color: #6f829b;
     padding: 30px 30px;
 }   
 
@@ -27,11 +27,6 @@ li {
     text-decoration: none;
     color : white;
     list-style : none;
-}
-
-.navbar-menu li :hover {
-    background-color: blanchedalmond;
-    border-radius: 4px;
 }
 
 .navbar-logo {
@@ -65,67 +60,18 @@ article {
     align-items: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+@media (max-width:767px) {    
 
-    /* border: 5px solid black; */
-    margin : 2vh;
-
-    height : calc(100vh - 60px - 12vh);
-    
-}
-
-.intro{
-    /* border: 2px solid black; */
-    width: 50%;
-    padding: 5%;
-}
-
-.intro p{
-    display: flex;
-    /* border: 1px solid black; */
-    font-size: 1.2em;
-    font-weight: 500;
-    line-height: 130%;
-}
-
-.intro h1{
-    display: flex;
-    font-size: 2.3em;
-    color: black;
-    text-shadow: 1px 1px gray;
-    /* border: 3px solid black; */
-    margin-bottom: 10px;
-}
-
-.main-photos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    height : calc(100vh - 60px - 12vh);
-
-    /* border: 2px solid black; */
-}
-
-.main-photos img {
-    display: flex;
-    text-align: center;
-    height: 90%;
-    max-width: 100%;
-}
-
-@media (min-width:768px) and (max-width:1023px) { 
-
-} 
-
-@media (min-width:350px) and (max-width:767px) {    
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        align-items: center;
+        background-color: rgb(67, 79, 133);
+    }
 
     .navbar-logo{
         display: flex;
-        position: sticky;
         justify-content: center;
         padding-top: 1px;
         padding-bottom: 1px;
@@ -133,15 +79,8 @@ article {
     }
 
     .navbar-logo img{
-        margin: 0;
-    }
-    
-    .navbar{
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        align-items: center;
-        background-color: rgb(67, 79, 133);
+        margin: 1vh;
+        width: 12vh;
     }
 
     .navbar-menu{
@@ -154,25 +93,13 @@ article {
         display: block;
     }
 
-
     .navbar-btn {
         display: block;
         position: absolute;
         color: aliceblue;
-        
-        height: 100%;
+        top: calc(var(--navbar-height)/3);
         right: 20px;
     }
-
-    .title h1{
-        border: 1px solid rgb(51, 42, 94);
-    }
-    
-
-}
-
-/* 모바일 가로, 테블릿 세로 (해상도 ~ 479px)*/ 
-@media (max-width:349px) {
 
 }
 

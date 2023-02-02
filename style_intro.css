@@ -5,13 +5,10 @@
     
 }
 
-
 .container {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    /* justify-content: space-between; */
-    /* border: 5px solid black; */
     margin : 2vh;
 
     height : calc(100vh - 60px - 12vh);
@@ -24,29 +21,37 @@
     padding: 5%;
 }
 
-.intro p{
-    display: flex;
-    /* border: 1px solid black; */
-    font-size: 1.2em;
-    font-weight: 500;
-    line-height: 130%;
-}
-
 .intro h1{
     display: flex;
     font-size: 2.3em;
     color: black;
     text-shadow: 1px 1px gray;
     /* border: 3px solid black; */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.intro p{
+    display: flex;
+    /* border: 1px solid black; */
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 130%;        
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 2s;
 }
 
 .main-photos {
+    opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     height : calc(100vh - 60px - 12vh);
+    
+    animation: fadeIn 1.5s ease-in-out forwards;
+    animation-delay: 1s;
 
     /* border: 2px solid black; */
 }
@@ -56,8 +61,6 @@
     text-align: center;
     height: 90%;
     max-width: 100%;
-    margin: 5%
-    animation
 }
 
 @keyframes fadeIn {
@@ -71,11 +74,36 @@
 }
 
 @media (min-width:350px) and (max-width:767px) {    
-    .intro h1{
+    .title h1{
         font-size : 1.3em;
+        border: 1px solid rgb(51, 42, 94);
     }
     
-    .paragraph{
-        font-size: 0.8em;
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 1vh 4vh;
+    }
+    
+    .main-photos{
+        display: none;
+    }
+    
+    .intro{
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+    }
+    
+    .intro h1{
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+    
+    .intro p{
+        font-size: 1.3em;
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+        animation-delay: 2s;
     }
 }

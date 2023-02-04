@@ -36,9 +36,9 @@ li {
 }
 
 .navbar-logo img{
-    width: 13%; 
+    width: 10%; 
     margin-right: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .navbar-logo a{
     text-decoration: none;

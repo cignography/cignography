@@ -22,7 +22,7 @@ li {
     display: flex;
     flex-direction: row;
     margin: 10px;
-
+    
     font-size: 15px;
     text-decoration: none;
     color : white;
@@ -31,8 +31,8 @@ li {
 
 .navbar-logo {
     height: 100%;
-    width: 100%;
-    display: flex;
+    /* width: 100%; */
+    /* display: flex; */
 }
 
 .navbar-logo img{

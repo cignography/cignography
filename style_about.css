@@ -7,23 +7,22 @@
 
 .container {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
-    /* margin : 2vh; */
-    box-sizing: border-box;
-    margin: 0 5vh;
-    height : calc((100 * var(--vh)) - var(--navbar-height));
+    margin : 2vh;
+
+    height : calc(100vh - 60px - 12vh);
+    
 }
 
 .intro{
-    width: 50%;
-    margin: 3vh;
-    /* padding: 5vh */
-    /* border: 1px solid black; */
+    /* border: 2px solid black; */
+    width: 90%;
+    padding: 5%;
 }
 
 .intro h1{
+    display: flex;
     font-size: 2.3em;
     color: black;
     text-shadow: 1px 1px gray;
@@ -33,6 +32,7 @@
 }
 
 .intro p{
+    display: flex;
     /* border: 1px solid black; */
     font-size: 1.2em;
     font-weight: 500;
@@ -43,17 +43,14 @@
 }
 
 .main-photos {
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
 
-    /* height : calc(100vh - 60px - 12vh); */
+    height : calc(100vh - 60px - 12vh);
     width: 50%;
-    height: auto;
-    margin: 3vh;
-
+    /* height: 100%; */
     object-fit: cover;
     
     animation: fadeIn 1.5s ease-in-out forwards;
@@ -64,14 +61,9 @@
 
 .main-photos img {
     display: flex;
-    text-align: center;    
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: auto;
-    /* max-width: 100%; */
-    /* max-height: calc(100vh - 60px - 12vh); */
-    max-height: calc(100vh - 60px - 12vh);
+    text-align: center;
+    height: 90%;
+    max-width: 100%;
 }
 
 @keyframes fadeIn {
@@ -84,28 +76,31 @@
     }
 }
 
-@media (max-width:767px) {    
-
-    .container {
-        display: flex;
-        flex-direction: row;
+@media (min-width:350px) and (max-width:767px) {    
+    .container{
+        flex-direction: column;
+        align-items: flex-start;
         justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        margin: 0;
-        height : calc((100 * var(--vh)) - var(--navbar-height));
+        margin: 1vh 4vh;
     }
+
+    .intro{
+        padding: 0px;
+        margin: 0px;
+        width: auto;
+
+    }
+
+    .title h1{
+        font-size : 1.3em;
+        border: 1px solid rgb(51, 42, 94);
+    }
+    
     
     .main-photos{
         display: none;
     }
     
-    .intro{
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
     
     .intro h1{
         animation: fadeIn 1.5s ease-in-out forwards;

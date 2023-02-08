@@ -1,40 +1,39 @@
 <html lang="kr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta charset="UTF-8" />
 
-    <meta property="og:url" content="cignography.github.io">
-    <meta property="og:title" content="CiGNography">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="작품을 감상해보세요">
-    <meta property="og:image" content="/opengraph.jpg">
+        <meta property="og:url" content="cignography.github.io" />
+        <meta property="og:title" content="CiGNography" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="작품을 감상해보세요" />
+        <meta property="og:image" content="/opengraph.jpg" />
 
-    <title>CiGNography</title>
-    <link rel="stylesheet" href="style_main.css">
+        <title>CiGNography</title>
+        <link rel="stylesheet" href="style_main.css" />
+        <script type="text/javascript" src="main.js" defer></script>
+        <script type="text/javascript" src="photo.js" defer></script>
+    </head>
 
-    <!-- <script src="https://kit.fontawesome.com/0a0459ea94.js" crossorigin="anonymous"></script> -->
-    <script type="text/javascript" src="main.js" defer></script>
-    <script type="text/javascript" src="photo.js" defer></script>
-    
-</head>
+    <body>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="main.html"><img src="logo_white.png" alt="logo" /></a>
+            </div>
+            <div class="navbar-menu">
+                <li onclick="fetchPage('intro.html')">Intro</li>
+                <li onclick="fetchPage('photo.html')">Photos</li>
+                <li onclick="fetchPage('about.html')">About</li>
+            </div>
+            <a href="#" class="navbar-btn">
+                <img src="more.png" alt="" />
+            </a>
+        </nav>
 
-<body>
-    <nav class='navbar'>
-        <div class="navbar-logo">
-            <a href="main.html"><img src="logo_white.png" alt="logo"></a>
-        </div>
-        <div class="navbar-menu">
-            <li onclick="fetchPage('intro.html')">Intro</li>
-            <li onclick="fetchPage('photo.html')">Photos</li>
-            <li onclick="fetchPage('about.html')">About</li>
-        </div>
-        <a href='#' class="navbar-btn">
-            <img src="more.png" alt="">
-        </a>
-    </nav>
-
-    <article>
-
-    </article>
-</body>
+        <article></article>
+    </body>
 </html>

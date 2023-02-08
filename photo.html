@@ -1,26 +1,51 @@
-<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link rel="stylesheet" href="style_photo.css">
-    <script type="text/javascript" src="photo.js" defer></script>
-    <body>
+</head>
+
+<body>
+    <div class="container"></div>
         <div class="photo-gallery">
-            <!-- <div class="photo-gallery"> -->
-                <div class="photo">
-                    <img src="result/output_1.jpeg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="result/output_14.jpeg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="result/output_15.jpeg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="result/output_30.jpeg" alt="">
-                </div>
-                <div class="photo">
-                    <img src="result/output_40.jpeg" alt="">
-                </div>
-                <!-- <button onclick="loadMore()">hello</button> -->
-                <!-- </div> -->
+
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/1.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/14.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/30.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/198.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/238.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/49.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/54.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/45.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/41.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/21.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/49.jpeg" /></div>
+            <div class="photo"><img src="https://cdn.jsdelivr.net/gh/cignography/cignography.github.io@main/photos/11.jpeg" /></div>
         </div>
-    </body>
-</html>
+    </div>
+    <script>
+    function loadMore() {
+        const photo_gallery = document.querySelector(".photo-gallery");
+    
+        if (window.innerHeight + window.scrollY + 200 >= document.body.offsetHeight) {
+            for (let i = 0; i < 10; i++) {
+                var num = generateRandomNumber();
+                console.log(num);
+    
+                let newImageDiv = document.createElement("div");
+                newImageDiv.setAttribute("class", "photo");
+    
+                let newImage = document.createElement("img");
+                newImageDiv.appendChild(newImage);
+    
+                newImage.src = "/result/" + num + ".jpeg";
+    
+                photo_gallery.appendChild(newImageDiv);
+            }
+        }  
+        
+    }</script>
+</body>
